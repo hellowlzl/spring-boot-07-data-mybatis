@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="/css/index.css" type="text/css" />
+</head>
+<body>
+<table border="1px" style="text-align: center;margin: 0px auto">
+    <tr>
+        <td th:text="id"></td>
+        <td th:text="用户"></td>
+        <td th:text="密码"></td>
+    </tr>
+    <tr th:each="userlist : ${session.userLists}">
+        <td th:text="${userlist.id}"></td>
+        <td th:text="${userlist.name}"></td>
+        <td th:text="${userlist.password}"></td>
+    </tr>
+</table>
+<script type="text/javascript" th:src="@{/webjars/jquery/2.1.4/jquery.js}"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+
+</body>
+</html>

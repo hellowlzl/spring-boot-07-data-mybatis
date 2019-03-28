@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆页面</title>
+    <script type="text/javascript" src="/webjars/jquery/2.1.4/jquery.js" th:src="@{/webjars/jquery/2.1.4/jquery.js}"></script>
+    <script type="text/javascript" src="/js/login.js"></script>
+</head>
+<body>
+<p th:if="${not #strings.isEmpty(session.manage)} " th:text="账号不存在"></p>
+<form action="/user/dologin" method="post" onsubmit="return  sublogin()">
+    名字<input type="text" name="name" class="textusername"><span class="usernamespan"> </span>
+    密码<input type="password" name="password" class="textuserpassword"><span class="textuserpassword"></span>
+    <input type="submit" />
+</form>
+</body>
+</html>
