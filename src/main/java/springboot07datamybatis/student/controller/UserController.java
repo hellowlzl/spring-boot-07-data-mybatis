@@ -33,7 +33,7 @@ public class UserController {
         if (userServices.getUserList(user).size() != 0) {
             return "redirect:/user/index";
         }
-        session.setAttribute("manage", "不存在账号123");
+        session.setAttribute("manage", "不存在账号这是我的测试分支");
         return "redirect:/user/login";
     }
 
